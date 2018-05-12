@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Admin | Transactions</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/transactions">New Transaction</a>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/accounts">Manage Accounts</a>
+      </div>
+    </div>
+    <div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="transaction-container">
+					<h1>Transactions</h1>
+					<table class="table table-striped">
+						<tbody>
+							<tr id="form-row">
+								<form id="transaction-form">
+									<td colspan="4">
+										<input placeholder="Enter a type" id="transaction-type" type="text" />
+									</td>
+									<td colspan="4">
+										<input placeholder="Enter an amount" id="transcaction-amount" type="text" />
+                  </td>
+                  <td colspan="4">
+										<input placeholder="Enter a description" id="transcaction-description" type="text" />
+                  </td>
+                  <div class="form-group">
+                    <label for="category">Select Account:</label>
+                    <select class="custom-select" id="account">
+                    </select>
+                  </div>
+									<td>
+										<button type="submit" class="btn btn-success">Create Transaction</button>
+									</td>
+								</form>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+  </div>
+  <!-- Custom Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+  <script src="js/transaction.js" type="text/javascript"></script>
+
+</body>
+
+</html>
